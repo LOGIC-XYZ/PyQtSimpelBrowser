@@ -14,7 +14,6 @@ class BrowserWindow(QMainWindow):
 
         self.setWindowTitle("simple browser")
         self.setGeometry(100, 100, 1200, 800)
-        self.settings = Settings()
 
         self.web_view = QWebEngineView()
         self.web_view.setUrl(QUrl(self.settings.get("homepage")))
