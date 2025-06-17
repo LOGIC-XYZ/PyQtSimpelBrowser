@@ -12,6 +12,7 @@ class BrowserWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        self.settings = Settings()
         self.setWindowTitle("simple browser")
         self.setGeometry(100, 100, 1200, 800)
 
@@ -25,7 +26,7 @@ class BrowserWindow(QMainWindow):
         self.history_manager.url_selected.connect(lambda url: self.web_view.setUrl(QUrl(url)))
         self.bookmark_manager = BookmarkManager()
         self.bookmark_manager.url_selected.connect(lambda url: self.web_view.setUrl(QUrl(url)))
-        self.settings = Settings()
+        
 
         # 历史记录连接
         self.web_view.urlChanged.connect(
