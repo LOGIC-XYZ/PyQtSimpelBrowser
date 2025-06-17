@@ -15,7 +15,7 @@ class Settings:
         self.defaults = {
             "theme": "Light",
             "font_size": 14,
-            "homepage": "https://www.google.com"
+            "homepage": "https://www.bing.com"
         }
         self.settings = self.load()
 

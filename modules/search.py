@@ -15,5 +15,5 @@ class SearchBar(QLineEdit):
                 text = "http://" + text
             url = QUrl(text)
         else:
-            url = QUrl(f"https://www.google.com/search?q={text}")
+            url = QUrl(f"https://www.bing.com/search?q={text}")
         self.web_view.setUrl(url)
